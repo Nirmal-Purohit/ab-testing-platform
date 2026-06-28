@@ -1,0 +1,25 @@
+services:
+  # ── Backend (FastAPI) ────────────────────────────────────────────────────
+  - type: web
+    name: experimentlab-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /api/health
+
+  # ── Frontend (Next.js) ──────────────────────────────────────────────────
+  - type: web
+    name: experimentlab-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: NEXT_PUBLIC_API_URL
+        value: https://experimentlab-backend.onrender.com/api
