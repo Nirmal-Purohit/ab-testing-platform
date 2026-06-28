@@ -184,7 +184,7 @@ export default function ExperimentDetailPage() {
       {/* Hypothesis */}
       <div className="card bg-slate-800/40 border-slate-700/50">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Hypothesis</p>
-        <p className="text-sm text-slate-300 italic">"{exp.hypothesis}"</p>
+        <p className="text-sm text-slate-300 italic">&quot;{exp.hypothesis}&quot;</p>
       </div>
 
       {/* Verdict */}

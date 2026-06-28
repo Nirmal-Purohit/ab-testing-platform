@@ -93,9 +93,9 @@ export default function MonitorPage() {
         <p className="text-sm text-slate-400 leading-relaxed">
           If you run a 30-day experiment, peek at the p-value every day, and
           stop whenever p&nbsp;&lt;&nbsp;0.05 — your actual false positive rate
-          isn't 5%. It's closer to{" "}
-          <span className="text-amber-300 font-semibold">20–30%</span>. You'll
-          declare winners that don't exist. The O'Brien-Fleming spending
+          isn&apos;t 5%. It&apos;s closer to{" "}
+          <span className="text-amber-300 font-semibold">20–30%</span>. You&apos;ll
+          declare winners that don&apos;t exist. The O&apos;Brien-Fleming spending
           boundary fixes this by setting a stricter threshold early in the
           experiment and relaxing it over time.
         </p>
@@ -164,7 +164,7 @@ export default function MonitorPage() {
                   <p className="text-2xl font-bold text-emerald-400">
                     {(result.false_positive_rate_sequential * 100).toFixed(1)}%
                   </p>
-                  <p className="text-xs text-slate-500 mt-1">Sequential (O'B-F) FPR</p>
+                  <p className="text-xs text-slate-500 mt-1">Sequential (O&apos;B-F) FPR</p>
                   <p className="text-xs text-emerald-500/70 mt-0.5">Target: ≤{(alpha * 100).toFixed(0)}%</p>
                 </div>
                 <div className="card text-center">
@@ -193,7 +193,7 @@ export default function MonitorPage() {
                   p-value Over Time
                 </h3>
                 <p className="text-xs text-slate-500 mb-4">
-                  Red line = naive p-value. Blue line = O'Brien-Fleming safe
+                  Red line = naive p-value. Blue line = O&apos;Brien-Fleming safe
                   stopping boundary. The naive line can drop below the flat
                   α={form.alpha} threshold many times — each one would be a
                   false positive if you stopped there.
@@ -255,7 +255,7 @@ export default function MonitorPage() {
                     <tr className="text-left border-b border-slate-800">
                       <th className="pb-2 text-slate-500">Day</th>
                       <th className="pb-2 text-slate-500">Naive p</th>
-                      <th className="pb-2 text-slate-500">O'B-F boundary</th>
+                      <th className="pb-2 text-slate-500">O&apos;B-F boundary</th>
                       <th className="pb-2 text-slate-500">Naive status</th>
                       <th className="pb-2 text-slate-500">Sequential status</th>
                     </tr>
